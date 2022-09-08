@@ -13,6 +13,13 @@ function mainCount(inputNumber) {
 
 
 countArray.forEach(function(number) {
+    let numArray = Array.from(number);
+    numArray.push(number);
+    console.log(numArray);
+
+// lines 16-18 resulted in each number being pushed into its own array when passed into mainCount().
+// the numbers WERE NOT split e.g : [9], [10], [11]
+
     if(three.includes(number)) {
         newCount.push("won't you be my neighbor?");
     }
