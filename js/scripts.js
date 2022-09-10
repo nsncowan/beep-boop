@@ -24,6 +24,7 @@ function mainCount(inputNumber) {
             countArray.push(count.toString());
         } 
     }
+    return countArray;
                 //console.log(countArray);
 }
     
@@ -31,11 +32,14 @@ function mainCount(inputNumber) {
 
 function handleFormSubmission(e) {
     e.preventDefault();
-    //const div = document.querySelector("div#output");
-    //const p1 = document.querySelector("p#printOutput");
-    const userInput = document.querySelector("input#number").value;
-    //const output = mainCount(userInput);
-    document.getElementById("span#printOutput").innerText = mainCount(userInput);
+    const div = document.querySelector("div#output");
+    const p1 = document.createElement("p");
+    div.append(p1);
+    const userInput = parseInt(document.querySelector("input#number").value);
+    console.log(userInput);
+    let output = mainCount(userInput);
+    console.log(output);
+    p1.innerText = output;
 }
 
 window.addEventListener("load", function() {
