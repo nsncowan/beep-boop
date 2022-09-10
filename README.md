@@ -12,7 +12,7 @@ test: "it should replace the number "1" with the string "beep", "2" with "boop",
 code: array: [0, 1, 2, 3, 4, 5]
 expected output: array [0, beep, boop, won't you be my neighbor, 4, 5]
 
-test: "it should identify if a string contains a 1"
+test: "it should identify if a multi-digit number contains a 1"
 code: "3415"
 expected output: true
 
