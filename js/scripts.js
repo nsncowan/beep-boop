@@ -1,39 +1,72 @@
-
 const one = [1];
 const two = [2];
 const three = [3];
 const countArray = [];
-const newCount = [];
+
 
 function mainCount(inputNumber) {
     for (let count = 0; count <= inputNumber; count++) {
-        countArray.push(count); 
-    } 
-    const stringArray = countArray.map(function(element) {
-        return element.toString();
-      })
-    
-    stringArray.forEach(function(number) {
-        let numArray = Array.from(number);
-        numArray.push(number);
-        console.log(numArray);
-    })
+       countArray.push(count.toString());
+    }
+console.log(countArray);
+// this returns a count of strings
+
+const filtered = countArray.filter(function(num) {
+    return num.includes("2");
+});
+console.log(filtered);
+// this returns a 2nd array of numbers that include the search digit
+
 }
 
-/* if(three.includes(number)) {
-            newCount.push("won't you be my neighbor?");
+
+countArray.forEach(function(element) {
+    if(three.includes(element)) {
+        countArray.push("won't you be my neighbor?");
+    }
+    else if(two.includes(element)) {
+        countArray.push("boop");
+    }
+    else if(one.includes(element)) {
+        countArray.push("beep");
+    }
+    else {
+        countArray.push(element);
+    } 
+console.log(countArray);
+})
+
+
+/*
+    stringArray.forEach(function(number) {
+        numArray = Array.from(number);
+        
+    })
+
+
+
+    numArray.forEach(function(element) {
+        if(three.includes(element)) {
+            stringArray.push("won't you be my neighbor?");
         }
-        else if(two.includes(number)) {
-            newCount.push("boop");
+        else if(two.includes(element)) {
+            stringArray.push("boop");
         }
-        else if(one.includes(number)) {
-            newCount.push("beep");
+        else if(one.includes(element)) {
+            stringArray.push("beep");
         }
         else {
-            newCount.push(number);
-        } */
+            stringArray.push(element);
+        } 
+    });
+    console.log(numArray);
+        //numArray.push(numbe
+*/
 
-  // the code above is the basic counting function returning an array of strings
+
+
+
+
 /*
 function findOnes(array, query) {
     return array.filter((element) =>
