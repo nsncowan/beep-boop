@@ -1,3 +1,4 @@
+
 const one = [1];
 const two = [2];
 const three = [3];
@@ -17,20 +18,13 @@ const filtered = countArray.filter(function(num) {
 console.log(filtered);
 // this returns a 2nd array of numbers that include the search digit
 
+function includes1(int) {
+    return int.includes("1")
 }
+ones = countArray.filter(includes1);
+console.log(ones);
+// this ALSO returns a 2nd array of numbers that include the search digit
 
-
-    function findOnes(array, query) {
-        query = query.toString();
-        return array.filter(function(num) {
-            return query.every(function(char) {
-                return num.includes(char);
-            });
-        });
-    }
-
-const includesOnes = findOnes(countArray, 1)
-
-console.log(includesOnes);
+}
 
 
