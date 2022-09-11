@@ -24,8 +24,7 @@ function mainCount(inputNumber) {
             countArray.push(count.toString());
         } 
     }
-    return countArray;
-                //console.log(countArray);
+    return countArray.join("\n");
 }
     
 // UI Logic
@@ -40,6 +39,7 @@ function handleFormSubmission(e) {
     let output = mainCount(userInput);
     console.log(output);
     p1.innerText = output;
+    document.getElementById("getNumber").reset();
 }
 
 window.addEventListener("load", function() {
