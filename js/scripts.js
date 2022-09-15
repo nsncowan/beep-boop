@@ -7,9 +7,10 @@ const num3 = "3"
 const message1 = "beep"
 const message2 ="boop"
 const message3 = "won't you be my neighbor?"
-const countArray = [];
+
 
 function mainCount(inputNumber) {
+    let countArray = [];
     for (let count = 0; count <= inputNumber; count++) {
         if(count.toString().includes(num3)) {
             countArray.push(message3);
@@ -30,14 +31,9 @@ function mainCount(inputNumber) {
 // UI Logic
 function handleFormSubmission(e) {
     e.preventDefault();
-    const div = document.querySelector("div#output");
-    const p1 = document.createElement("p");
-    div.append(p1);
     const userInput = parseInt(document.querySelector("input#number").value);
-    console.log(userInput);
     let output = mainCount(userInput);
-    console.log(output);
-    p1.innerText = output;
+    document.getElementById("output").innerText = output;
     document.getElementById("getNumber").reset();
 }
 
